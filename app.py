@@ -4,7 +4,7 @@ from google import genai
 import os
 import traceback
 app=FastAPI()
-client=genai.Client(api_key="os.environ["GEMINI_API_KEY"]")
+client=genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 class joke_genre(BaseModel):
     prompt:str
     category:str
